@@ -3,6 +3,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@ng-doc/generated": [
+        "./ng-doc/activity-board-front/index.ts"
+      ],
+      "@ng-doc/generated/*": [
+        "./ng-doc/activity-board-front/*"
+      ]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
