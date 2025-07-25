@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+if ! find ./src -name '*.spec.ts' | grep -q .; then
+  echo "No test spec files found, skipping tests."
+  exit 0  # Allow push/commit to continue successfully
+fi
+
 ng test --watch=false
