@@ -1,7 +1,19 @@
-import { provideNgDocApp, provideSearchEngine, NgDocDefaultSearchEngine, providePageSkeleton, NG_DOC_DEFAULT_PAGE_SKELETON, provideMainPageProcessor, NG_DOC_DEFAULT_PAGE_PROCESSORS } from "@ng-doc/app";
-import { NG_DOC_ROUTING, provideNgDocContext } from "@ng-doc/generated";
-import { provideHttpClient, withInterceptorsFromDi, withFetch } from "@angular/common/http";
-import { provideAnimations } from "@angular/platform-browser/animations";
+import {
+  provideNgDocApp,
+  provideSearchEngine,
+  NgDocDefaultSearchEngine,
+  providePageSkeleton,
+  NG_DOC_DEFAULT_PAGE_SKELETON,
+  provideMainPageProcessor,
+  NG_DOC_DEFAULT_PAGE_PROCESSORS,
+} from '@ng-doc/app';
+import { NG_DOC_ROUTING, provideNgDocContext } from '@ng-doc/generated';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+  withFetch,
+} from '@angular/common/http';
+import { provideAnimations } from '@angular/platform-browser/animations';
 import {
   ApplicationConfig,
   provideBrowserGlobalErrorListeners,
@@ -16,14 +28,20 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-        provideAnimations(),
-        provideHttpClient(withInterceptorsFromDi()),
-        provideRouter(NG_DOC_ROUTING, withInMemoryScrolling({scrollPositionRestoration: "enabled", anchorScrolling: "enabled"})),
-        provideHttpClient(withInterceptorsFromDi(), withFetch()),
-        provideNgDocContext(),
-        provideNgDocApp(),
-        provideSearchEngine(NgDocDefaultSearchEngine),
-        providePageSkeleton(NG_DOC_DEFAULT_PAGE_SKELETON),
-        provideMainPageProcessor(NG_DOC_DEFAULT_PAGE_PROCESSORS)
-    ],
+    provideAnimations(),
+    provideHttpClient(withInterceptorsFromDi()),
+    provideRouter(
+      NG_DOC_ROUTING,
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'enabled',
+        anchorScrolling: 'enabled',
+      }),
+    ),
+    provideHttpClient(withInterceptorsFromDi(), withFetch()),
+    provideNgDocContext(),
+    provideNgDocApp(),
+    provideSearchEngine(NgDocDefaultSearchEngine),
+    providePageSkeleton(NG_DOC_DEFAULT_PAGE_SKELETON),
+    provideMainPageProcessor(NG_DOC_DEFAULT_PAGE_PROCESSORS),
+  ],
 };
