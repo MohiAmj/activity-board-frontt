@@ -10,27 +10,35 @@ A **reusable**, **highly customizable** button component designed for consistent
 ---
 
 #### 🔧 Features:
-- Reusable across different modules or shared UIs
+- Easily reusable across modules or shared UIs
 - Fully styleable via \`@Input()\` bindings
 - Supports both **solid** and **outline** styles
-- Clean and minimal design
+- Clean, minimal, and scalable design
 
 ---
 
 #### 📥 Inputs:
 
-| Name       | Type     | Description                          |
-|------------|----------|------------------------------------|
-| \`label\`  | \`string\` | The text displayed inside the button |
-| \`bgColor\`  | \`'primary' | 'accent' | 'warn' | 'success'\` | The background color of button |
-
+| Name       | Type     | Description                                           |
+|------------|----------|-------------------------------------------------------|
+| \`label\`     | \`string\`  | The text displayed inside the button                  |
+| \`bgColor\`   | \`'primary' | 'accent' | 'warn' | 'success'\` | Sets the button background color     |
+| \`disabled\`  | \`boolean\` | If \`true\`, disables the button                      |
+| \`size\`      | \`'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'\` | Defines the button size             |
+| \`rounded\`   | \`'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'\` | Controls the border radius styling |
 
 ---
 
 #### 💡 Example Usage:
 
 \`\`\`html
-<app-base-button [label]="'Submit'"></app-base-button>
+<app-base-button
+  [label]="'Submit'"
+  [bgColor]="'primary'"
+  [disabled]="false"
+  [size]="'lg'"
+  [rounded]="'md'">
+</app-base-button>
 \`\`\`
 `;
 

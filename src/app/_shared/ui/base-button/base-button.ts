@@ -20,7 +20,7 @@ export class BaseButton {
     input<'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'>('lg');
 
   private readonly colorMap: Record<string, string> = {
-    primary: ' bg-blue-500 hover:bg-blue-600 ',
+    primary: ' bg-primary hover:bg-blue-600 ',
     accent: ' bg-pink-500 hover:bg-pink-600 ',
     warn: ' bg-red-500 hover:bg-red-600 ',
     success: ' bg-green-500 hover:bg-green-600 ',
