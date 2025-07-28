@@ -1,1 +1,11 @@
-<button class="p-2 bg-blue-500 rounded-2xl text-white">Base Button</button>
+<button
+  [disabled]="disabled()"
+  [class]="
+    sizeClass() +
+    roundedClass() +
+    bgClass() +
+    '  cursor-pointer  text-white disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-100'
+  "
+>
+  {{ label() }}
+</button>
