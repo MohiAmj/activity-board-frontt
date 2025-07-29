@@ -45,9 +45,35 @@ const meta: Meta<BaseText> = {
       },
     },
   },
-  argTypes: {},
+  argTypes: {
+    type: {
+      control: {
+        type: 'select',
+        options: [
+          'display1',
+          'display2',
+          'display3',
+          'display4',
+          'display5',
+          'display6',
+          'display7',
+          'header1',
+          'header2',
+          'header3',
+          'header4',
+          'header5',
+          'header6',
+          'body1',
+          'body2',
+          'body3',
+          'body4',
+          'button1',
+        ],
+      },
+      description: `Defines the typography style for the text.`,
+    },
+  },
 };
-
 export default meta;
 
 type Story = StoryObj<BaseText>;
