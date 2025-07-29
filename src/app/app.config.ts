@@ -7,13 +7,14 @@ import {
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { Home, LucideAngularModule, Plus, X, Camera } from 'lucide-angular';
+import { LucideIcons } from './_shared/icons/lucide-icons';
+import { LucideAngularModule } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    importProvidersFrom(LucideAngularModule.pick({ Home, X, Plus, Camera })),
+    importProvidersFrom(LucideAngularModule.pick(LucideIcons)),
   ],
 };

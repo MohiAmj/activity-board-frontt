@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { BaseButton } from '../_shared/ui/base-button/base-button';
-import { Camera, Home, LucideAngularModule, Plus, X } from 'lucide-angular';
+import { LucideIcons } from '../_shared/icons/lucide-icons';
+import { LucideAngularModule } from 'lucide-angular';
 
 const componentDescription = `
 ### 🚀 ButtonComponent
@@ -86,10 +87,7 @@ const meta: Meta<BaseButton> = {
   render: (args) => ({
     props: args,
     moduleMetadata: {
-      imports: [
-        BaseButton,
-        LucideAngularModule.pick({ Home, X, Plus, Camera }),
-      ],
+      imports: [BaseButton, LucideAngularModule.pick(LucideIcons)],
     },
   }),
 };

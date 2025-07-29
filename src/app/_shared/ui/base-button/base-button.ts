@@ -1,12 +1,13 @@
 import { Component, computed, input, InputSignal } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
+import { BaseText } from '../base-text/base-text';
 
 @Component({
   selector: 'app-base-button',
   templateUrl: './base-button.html',
   styleUrl: './base-button.css',
   standalone: true,
-  imports: [LucideAngularModule],
+  imports: [LucideAngularModule, BaseText],
 })
 export class BaseButton {
   label: InputSignal<string> = input<string>('Base Button');
