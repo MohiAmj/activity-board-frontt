@@ -7,8 +7,82 @@
   --background-color: #f0f0f0;
   --text-color: #333333;
   --border-color: #dddddd;
+
+  --font-dana: "dana";
 }
 
 @theme {
   --color-primary: var(--primary-color);
+}
+
+@layer base {
+  @font-face {
+    font-family: "dana";
+    src: url("./assets/fonts/Dana-family/Dana-Thin.ttf") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url("./assets/fonts/Dana-family/Dana-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url("./assets/fonts/Dana-family/Dana-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url("./assets/fonts/Dana-family/Dana-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url("./assets/fonts/Dana-family/Dana-Bold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url("./assets/fonts/Dana-family/Dana-ExtraBold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url("./assets/fonts/Dana-family/Dana-Black.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url("./assets/fonts/Dana-family/Dana-ExtraBlack.ttf")
+      format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: auto;
+  }
+}
+
+html,
+body {
+  font-family: var(--font-dana);
+  margin: 0;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
