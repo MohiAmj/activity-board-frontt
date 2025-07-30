@@ -8,11 +8,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './base-card.css',
 })
 export class BaseCard {
-  @Input() width: string = '';
-  @Input() height: string = '';
-  @Input() bgColor: string = 'bg-white/10';
-  @Input() borderRadius: string = 'rounded-2xl';
-  @Input() padding: string = 'p-8';
-  @Input() flexFlow: string = 'flex-row';
-  @Input() margin: string = '';
+  @Input() width = '';
+  @Input() height = '';
+  @Input() bgColor = 'bg-white/10';
+  @Input() borderRadius = 'rounded-2xl';
+  @Input() padding = 'p-8';
+  @Input() flexFlow = 'flex-row';
+  @Input() margin = '';
 }
