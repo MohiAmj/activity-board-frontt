@@ -29,8 +29,11 @@ export class BaseText {
     body2: 'font-normal text-lg',
     body3: 'font-light text-sm',
     body4: 'font-light text-xs',
-    button1: 'font-extrabold text-base',
+    button1: 'font-bold text-base',
+    button2: 'font-bold text-xs',
   };
+
+  classes: InputSignal<string> = input<string>('');
 
   readonly typeClass = computed(() => this.typeToClassMap[this.type()]);
 }
