@@ -16,4 +16,5 @@ export type TypographyType =
   | 'body2'
   | 'body3'
   | 'body4'
-  | 'button1';
+  | 'button1'
+  | 'button2';

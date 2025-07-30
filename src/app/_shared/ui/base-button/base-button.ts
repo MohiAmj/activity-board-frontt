@@ -1,16 +1,19 @@
+import { NgClass } from '@angular/common';
 import { Component, computed, input, InputSignal } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import { BaseText } from '../base-text/base-text';
-
 @Component({
   selector: 'app-base-button',
   templateUrl: './base-button.html',
   styleUrl: './base-button.css',
   standalone: true,
-  imports: [LucideAngularModule, BaseText],
+  imports: [LucideAngularModule, BaseText, NgClass],
 })
 export class BaseButton {
   label: InputSignal<string> = input<string>('Base Button');
+  labelType: InputSignal<'button1' | 'button2'> = input<'button1' | 'button2'>(
+    'button1',
+  );
   bgColor: InputSignal<'primary' | 'accent' | 'warn' | 'success'> = input<
     'primary' | 'accent' | 'warn' | 'success'
   >('primary');
@@ -38,7 +41,7 @@ export class BaseButton {
     lg: '  p-3  ',
     xl: '  p-4 ',
     '2xl': '  p-4  ',
-    full: ' p-4 ',
+    full: 'p-4 w-full ',
   };
 
   private readonly roundedMap: Record<string, string> = {

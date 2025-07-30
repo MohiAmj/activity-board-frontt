@@ -1,18 +1,22 @@
 <button
   [disabled]="disabled()"
-  [class]="
-    sizeClass() +
-    roundedClass() +
-    bgClass() +
-    '  cursor-pointer flex px-8  justify-center items-center gap-2  text-white disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-100'
-  "
+  [ngClass]="[
+    sizeClass(),
+    roundedClass(),
+    bgClass(),
+    'cursor-pointer flex justify-center items-center gap-2 px-8 text-white',
+    'disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-100',
+  ]"
 >
-  @if (icon()) {
-    <span
-      ><lucide-angular size="20" [name]="icon()?.toString()"></lucide-angular
-    ></span>
-  }
-  <app-base-text type="button1">
+  <app-base-text
+    [type]="labelType()"
+    [classes]="'flex gap-1 items-center justify-center '"
+  >
+    @if (icon()) {
+      <span>
+        <lucide-angular size="20" [name]="icon()?.toString()"></lucide-angular>
+      </span>
+    }
     <h1>{{ label() }}</h1>
   </app-base-text>
 </button>
