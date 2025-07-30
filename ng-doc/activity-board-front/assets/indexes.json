@@ -1,0 +1,34 @@
+[
+  {
+    "breadcrumbs": ["base-input"],
+    "pageType": "guide",
+    "title": "base-input",
+    "section": "",
+    "route": "base-input",
+    "content": "It's time to write some awesome docs"
+  },
+  {
+    "breadcrumbs": ["input"],
+    "pageType": "guide",
+    "title": "input",
+    "section": "",
+    "route": "input",
+    "content": "It's time to write some awesome docs!"
+  },
+  {
+    "breadcrumbs": ["Installation"],
+    "pageType": "guide",
+    "title": "Installation",
+    "section": "",
+    "route": "installation",
+    "content": "It's time to write some awesome docs!"
+  },
+  {
+    "breadcrumbs": ["Examples"],
+    "pageType": "guide",
+    "title": "Examples",
+    "section": "",
+    "route": "examples",
+    "content": "It's time to write some awesome docs!"
+  }
+]
