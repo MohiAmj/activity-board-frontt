@@ -1,6 +1,7 @@
-import { CommonModule } from '@angular/common';
 import type { Meta, StoryObj } from '@storybook/angular';
 import { BaseButton } from '../_shared/ui/base-button/base-button';
+import { LucideIcons } from '../_shared/icons/lucide-icons';
+import { LucideAngularModule } from 'lucide-angular';
 
 const componentDescription = `
 ### 🚀 ButtonComponent
@@ -26,6 +27,8 @@ A **reusable**, **highly customizable** button component designed for consistent
 | \`disabled\`  | \`boolean\` | If \`true\`, disables the button                      |
 | \`size\`      | \`'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'\` | Defines the button size             |
 | \`rounded\`   | \`'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'\` | Controls the border radius styling |
+| \`icon\`   | \`'string' | 'null'\` | Icon for button |
+
 
 ---
 
@@ -37,7 +40,8 @@ A **reusable**, **highly customizable** button component designed for consistent
   [bgColor]="'primary'"
   [disabled]="false"
   [size]="'lg'"
-  [rounded]="'md'">
+  [rounded]="'md'"
+  icon='home'">
 </app-base-button>
 \`\`\`
 `;
@@ -83,7 +87,7 @@ const meta: Meta<BaseButton> = {
   render: (args) => ({
     props: args,
     moduleMetadata: {
-      imports: [CommonModule, BaseButton],
+      imports: [BaseButton, LucideAngularModule.pick(LucideIcons)],
     },
   }),
 };
@@ -100,14 +104,16 @@ export const Primary: Story = {
     disabled: false,
     size: 'xl',
     rounded: 'lg',
+    icon: 'home',
   },
+
   parameters: {
     docs: {
       description: {
         story: `This is the **Primary** variant of the button. Use it for main CTAs (Call to Actions).`,
       },
       source: {
-        code: `<app-base-button [rounded]="'lg'"  [disabled]="'false'" [bgColor]="'primary'" [size]="'xl'" [label]="'Click me'"></app-base-button>`,
+        code: `<app-base-button [icon]='home' [rounded]="'lg'"  [disabled]="false" [bgColor]="'primary'" [size]="'xl'" [label]="'Click me'"></app-base-button>`,
         language: 'html',
       },
     },

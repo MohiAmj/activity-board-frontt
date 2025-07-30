@@ -36,6 +36,7 @@
     "@ng-web-apis/common": "^4.12.0",
     "@tinkoff/ng-polymorpheus": "^4.3.0",
     "di-controls": "^5.0.9",
+    "lucide-angular": "^0.533.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

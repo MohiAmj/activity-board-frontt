@@ -1,10 +1,13 @@
 import { Component, computed, input, InputSignal } from '@angular/core';
+import { LucideAngularModule } from 'lucide-angular';
+import { BaseText } from '../base-text/base-text';
 
 @Component({
   selector: 'app-base-button',
   templateUrl: './base-button.html',
   styleUrl: './base-button.css',
   standalone: true,
+  imports: [LucideAngularModule, BaseText],
 })
 export class BaseButton {
   label: InputSignal<string> = input<string>('Base Button');
@@ -19,6 +22,8 @@ export class BaseButton {
   rounded: InputSignal<'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'> =
     input<'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'>('lg');
 
+  icon: InputSignal<string | null> = input<string | null>(null);
+
   private readonly colorMap: Record<string, string> = {
     primary: ' bg-primary hover:bg-blue-600 ',
     accent: ' bg-pink-500 hover:bg-pink-600 ',
@@ -27,13 +32,13 @@ export class BaseButton {
   };
 
   private readonly sizeMap: Record<string, string> = {
-    xs: ' w-20 h-6 ',
-    sm: ' w-28 h-8 ',
-    md: ' w-36 h-10 ',
-    lg: ' w-44 h-12 ',
-    xl: ' w-52 h-14 ',
-    '2xl': ' w-60 h-16 ',
-    full: ' w-full h-full ',
+    xs: '  p-2 ',
+    sm: '  p-2 ',
+    md: '  p-3 ',
+    lg: '  p-3  ',
+    xl: '  p-4 ',
+    '2xl': '  p-4  ',
+    full: ' p-4 ',
   };
 
   private readonly roundedMap: Record<string, string> = {
