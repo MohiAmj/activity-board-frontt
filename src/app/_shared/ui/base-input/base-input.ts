@@ -4,12 +4,12 @@ import {
   NG_VALUE_ACCESSOR,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { NgClass, NgIf } from '@angular/common';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-base-input',
   standalone: true,
-  imports: [NgIf, NgClass, ReactiveFormsModule],
+  imports: [NgIf, ReactiveFormsModule],
   templateUrl: './base-input.html',
   styleUrl: './base-input.css',
   providers: [
