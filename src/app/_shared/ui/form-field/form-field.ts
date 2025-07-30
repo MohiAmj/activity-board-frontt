@@ -9,39 +9,35 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class FormField implements AfterViewInit {
   @ViewChild('fieldset') fieldset: ElementRef | undefined;
-  classDesignForInput = '';
+  classDesign = [
+    'bg-white/10',
+    'backdrop-blur-sm',
+    'border-none',
+    'outline-none',
+    'hover:bg-white/15',
+    'focus:bg-white/20',
+    'indent-5',
+    'text-white',
+    'py-2',
+    'hover:shadow-md',
+    'hover:shadow-black',
+    'transition-all',
+  ];
 
   ngAfterViewInit() {
     const input = this.fieldset?.nativeElement.querySelector('input');
     if (input) {
-      input.classList.add(
-        'bg-white',
-        'rounded-full',
-        'border-none',
-        'outline-none',
-      );
+      input.classList.add(...this.classDesign, 'rounded-full');
     }
 
     const select = this.fieldset?.nativeElement.querySelector('select');
     if (select) {
-      select.classList.add(
-        'bg-white',
-        'rounded-full',
-        'border-none',
-        'outline-none',
-        'h-18',
-        'w-full',
-      );
+      select.classList.add(...this.classDesign, 'rounded-full');
     }
 
     const textarea = this.fieldset?.nativeElement.querySelector('textarea');
     if (textarea) {
-      textarea.classList.add(
-        'bg-white',
-        'rounded-full',
-        'border-none',
-        'outline-none',
-      );
+      textarea.classList.add(...this.classDesign, 'rounded-lg');
     }
   }
 }
