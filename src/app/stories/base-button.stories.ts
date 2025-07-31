@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { BaseButton } from '../_shared/ui/base-button/base-button';
-import { LucideIcons } from '../_shared/icons/lucide-icons';
 import { LucideAngularModule } from 'lucide-angular';
+import { LucideIcons } from '../_shared/icons/lucide-icons';
+import { BaseButton } from '../_shared/ui/base-button/base-button';
 
 const componentDescription = `
 ### 🚀 ButtonComponent
@@ -23,6 +23,7 @@ A **reusable**, **highly customizable** button component designed for consistent
 | Name       | Type     | Description                                           |
 |------------|----------|-------------------------------------------------------|
 | \`label\`     | \`string\`  | The text displayed inside the button                  |
+| \`labelType\`   | \`'string'\` | Text Type for show button text |
 | \`bgColor\`   | \`'primary' | 'accent' | 'warn' | 'success'\` | Sets the button background color     |
 | \`disabled\`  | \`boolean\` | If \`true\`, disables the button                      |
 | \`size\`      | \`'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'\` | Defines the button size             |
@@ -35,14 +36,7 @@ A **reusable**, **highly customizable** button component designed for consistent
 #### 💡 Example Usage:
 
 \`\`\`html
-<app-base-button
-  [label]="'Submit'"
-  [bgColor]="'primary'"
-  [disabled]="false"
-  [size]="'lg'"
-  [rounded]="'md'"
-  icon='home'">
-</app-base-button>
+<app-base-button [labelType]="'button2'" [icon]='home' [rounded]="'lg'"  [disabled]="false" [bgColor]="'primary'" [size]="'xl'" [label]="'Click me'"></app-base-button>
 \`\`\`
 `;
 
@@ -58,6 +52,12 @@ const meta: Meta<BaseButton> = {
     },
   },
   argTypes: {
+    labelType: {
+      control: {
+        type: 'select',
+      },
+      options: ['button1', 'button2'],
+    },
     bgColor: {
       control: {
         type: 'select',
@@ -105,6 +105,7 @@ export const Primary: Story = {
     size: 'xl',
     rounded: 'lg',
     icon: 'home',
+    labelType: 'button2',
   },
 
   parameters: {
@@ -113,7 +114,7 @@ export const Primary: Story = {
         story: `This is the **Primary** variant of the button. Use it for main CTAs (Call to Actions).`,
       },
       source: {
-        code: `<app-base-button [icon]='home' [rounded]="'lg'"  [disabled]="false" [bgColor]="'primary'" [size]="'xl'" [label]="'Click me'"></app-base-button>`,
+        code: `<app-base-button [labelType]="'button2'" [icon]='home' [rounded]="'lg'"  [disabled]="false" [bgColor]="'primary'" [size]="'xl'" [label]="'Click me'"></app-base-button>`,
         language: 'html',
       },
     },

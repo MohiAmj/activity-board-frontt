@@ -18,7 +18,7 @@ A **reusable**, **highly customizable** text component designed for consistent t
 
 | Name    | Type                                                                                                                  | Description                                           |
 |---------|-----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| \`type\` | \`'display1' \| 'display2' \| 'display3' \| 'display4' \| 'display5' \| 'display6' \| 'display7' \| 'header1' \| 'header2' \| 'header3' \| 'header4' \| 'header5' \| 'header6' \| 'body1' \| 'body2' \| 'body3' \| 'body4' \| 'button1'\` | Defines the typography style for the text. |
+| \`type\` | \`'display1' \| 'display2' \| 'display3' \| 'display4' \| 'display5' \| 'display6' \| 'display7' \| 'header1' \| 'header2' \| 'header3' \| 'header4' \| 'header5'   \| 'header6' \| 'body1' \| 'body2' \| 'body3' \| 'body4' \| 'button1' \| 'button2' \` | Defines the typography style for the text. |
 
 ---
 
@@ -69,6 +69,7 @@ const meta: Meta<BaseText> = {
         'body3',
         'body4',
         'button1',
+        'button2',
       ],
     },
   },
@@ -84,7 +85,7 @@ export const Header1: Story = {
   },
   render: (args) => ({
     props: args,
-    template: `<app-base-text [type]="type" class="text-black">
+    template: `<app-base-text  [type]="type" class="text-black">
       <h1>This is a text for test</h1>
     </app-base-text>`,
     moduleMetadata: {
