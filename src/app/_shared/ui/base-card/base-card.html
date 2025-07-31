@@ -1,7 +1,20 @@
 <div class="flex justify-center">
   <div
-    class="{{ bgColor }} {{ borderRadius }} {{ padding }} {{ flexFlow }} flex "
-    [ngClass]="width"
+    class="flex"
+    [ngClass]="
+      width +
+      ' ' +
+      bgColor +
+      ' ' +
+      padding +
+      ' ' +
+      borderRadius +
+      ' ' +
+      flexFlow +
+      ' ' +
+      border +
+      ' '
+    "
   >
     <ng-content></ng-content>
   </div>

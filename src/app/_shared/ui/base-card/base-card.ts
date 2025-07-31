@@ -15,4 +15,5 @@ export class BaseCard {
   @Input() padding = 'p-8';
   @Input() flexFlow = 'flex-row';
   @Input() margin = '';
+  @Input() border = 'border border-none';
 }
