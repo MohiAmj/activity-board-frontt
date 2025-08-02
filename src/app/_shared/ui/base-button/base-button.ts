@@ -35,13 +35,13 @@ export class BaseButton {
   };
 
   private readonly sizeMap: Record<string, string> = {
-    xs: '  p-2 ',
-    sm: '  p-2 ',
-    md: '  p-3 ',
-    lg: '  p-3  ',
-    xl: '  p-4 ',
-    '2xl': '  p-4  ',
-    full: 'p-4 w-full ',
+    xs: '  p-[4px] ',
+    sm: '  p-[5px] ',
+    md: '  p-[6px] ',
+    lg: '  p-[7px]  ',
+    xl: '  p-[8px] ',
+    '2xl': '  p-[9px]  ',
+    full: 'p-[10px] w-full ',
   };
 
   private readonly roundedMap: Record<string, string> = {
