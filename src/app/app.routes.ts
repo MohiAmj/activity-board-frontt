@@ -13,4 +13,9 @@ export const routes: Routes = [
         (m) => m.PlaygroundModule,
       ),
   },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./_modules/profile/profile-module').then((m) => m.ProfileModule),
+  },
 ];
