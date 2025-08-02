@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './base-card.html',
   styleUrl: './base-card.css',
+  standalone: true,
 })
 export class BaseCard {
   @Input() width = '';
