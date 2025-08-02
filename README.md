@@ -4,6 +4,6 @@ Welcome to our project documentation. Below are our coding standards and convent
 
 ---
 
-- [Project Info](readme/PROJECT_INFO.MD)
+- [Project Info](readme/PROJECT_INFO.md)
 - [Naming Conventions](readme/NAMING_CONVENTION.md)
 - [Tailwind Standards](readme/TAILWIND_STANDARDS.md)
