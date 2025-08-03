@@ -11,9 +11,7 @@ import { BaseText } from '../base-text/base-text';
 })
 export class BaseButton {
   label: InputSignal<string> = input<string>('Base Button');
-  labelType: InputSignal<'button1' | 'button2'> = input<'button1' | 'button2'>(
-    'button1',
-  );
+  labelType: InputSignal<'button1' | 'button2'> = input<'button1' | 'button2'>('button1');
   bgColor: InputSignal<'primary' | 'accent' | 'warn' | 'success'> = input<
     'primary' | 'accent' | 'warn' | 'success'
   >('primary');
@@ -22,8 +20,9 @@ export class BaseButton {
     'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'
   >('lg');
 
-  rounded: InputSignal<'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'> =
-    input<'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'>('lg');
+  rounded: InputSignal<'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'> = input<
+    'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'
+  >('lg');
 
   icon: InputSignal<string | null> = input<string | null>(null);
 
