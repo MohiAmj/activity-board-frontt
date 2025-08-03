@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-base-card',
@@ -8,13 +8,4 @@ import { Component, Input } from '@angular/core';
   styleUrl: './base-card.css',
   standalone: true,
 })
-export class BaseCard {
-  @Input() width = '';
-  @Input() height = '';
-  @Input() bgColor = 'bg-white/10';
-  @Input() borderRadius = 'rounded-2xl';
-  @Input() padding = 'p-8';
-  @Input() flexFlow = 'flex-row';
-  @Input() margin = '';
-  @Input() border = 'border border-none';
-}
+export class BaseCard {}
