@@ -6,7 +6,7 @@ import { BaseButton } from '../../../../_shared/ui/base-button/base-button';
 
 @Component({
   selector: 'app-login-page',
-  imports: [BaseCard, BaseText, FormField, BaseButton],
+  imports: [BaseCard, FormField, BaseText, BaseButton],
   templateUrl: './login-page.html',
   styleUrl: './login-page.css',
 })
