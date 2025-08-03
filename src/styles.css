@@ -1,18 +1,80 @@
 @import "tailwindcss";
 
 :root {
-  --primary-color: #6f6dfe;
-  --secondary-color: #50e3c2;
-  --accent-color: #f5a623;
-  --background-color: #f0f0f0;
-  --text-color: #333333;
-  --border-color: #dddddd;
+  --primary-color: #060524;
+  --primary-color-2: #161452;
+  --primary-color-3: #6f6dfe;
+  --primary-color-4: #9d9aeb;
+  --primary-color-5: #d1cff9;
+
+  --neutral-color-1: #616161;
+  --neutral-color-2: #b0b0b0;
+  --neutral-color-3: #c7c7c7;
+  --neutral-color-4: #d7d7d7;
+  --neutral-color-5: #e0e0e0;
+  --neutral-color-6: #efefef;
+  --neutral-color-7: #f5f5f5;
+
+  --status-color-1: #ea5e0f;
+  --status-color-2: #ea910f;
+  --status-color-3: #eacc0f;
 
   --font-dana: "dana";
 }
 
+[data-theme="dark"] {
+  --primary-color: #060524;
+  --primary-color-2: #161452;
+  --primary-color-3: #6f6dfe;
+  --primary-color-4: #9d9aeb;
+  --primary-color-5: #d1cff9;
+
+  --neutral-color-1: #616161;
+  --neutral-color-2: #b0b0b0;
+  --neutral-color-3: #c7c7c7;
+  --neutral-color-4: #d7d7d7;
+  --neutral-color-5: #e0e0e0;
+  --neutral-color-6: #efefef;
+  --neutral-color-7: #f5f5f5;
+
+  --status-color-1: #ea5e0f;
+  --status-color-2: #ea910f;
+  --status-color-3: #eacc0f;
+}
+
 @theme {
   --color-primary: var(--primary-color);
+  --color-primary-2: var(--primary-color-2);
+  --color-primary-3: var(--primary-color-3);
+  --color-primary-4: var(--primary-color-4);
+  --color-primary-5: var(--primary-color-5);
+
+  --color-neutral-1: var(--neutral-color-1);
+  --color-neutral-2: var(--neutral-color-2);
+  --color-neutral-3: var(--neutral-color-3);
+  --color-neutral-4: var(--neutral-color-4);
+  --color-neutral-5: var(--neutral-color-5);
+  --color-neutral-6: var(--neutral-color-6);
+  --color-neutral-7: var(--neutral-color-7);
+
+  --color-status-1: var(--status-color-1);
+  --color-status-2: var(--status-color-2);
+  --color-status-3: var(--status-color-3);
+
+  --color-background: #121212;
+  --color-text: #e0e0e0;
+}
+
+[data-theme="dark"] {
+  --color-background: var(--primary-color);
+  --color-text: var(--primary-color-5);
+}
+
+@layer theme {
+  .dark {
+    --bg-base: var(--bg-dark);
+    --text-base: var(--text-dark);
+  }
 }
 
 @layer base {
