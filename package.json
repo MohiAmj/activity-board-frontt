@@ -2,26 +2,17 @@
   "name": "activity-board-front",
   "version": "0.0.0",
   "scripts": {
-    "pretty-quick": "pretty-quick --staged",
+    "pretty-quick": "pretty-quick--staged",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch--configuration development",
     "test": "ng test",
     "lint": "ng lint --fix",
-    "prepare": "husky install",
+    "prepare": "huskyinstall",
     "storybook": "ng run activity-board-front:storybook",
-    "build-storybook": "ng run activity-board-front:build-storybook"
-  },
-  "prettier": {
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
+    "build-storybook": "ng runactivity-board-front:build-storybook",
+    "format": "npx prettier . --write"
   },
   "private": true,
   "dependencies": {
@@ -62,7 +53,9 @@
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.3",
+    "eslint-plugin-regex": "^1.10.0",
     "eslint-plugin-storybook": "^9.0.18",
+    "eslint-plugin-tailwindcss": "^3.18.2",
     "husky": "^8.0.0",
     "jasmine-core": "~5.8.0",
     "karma": "~6.4.0",
@@ -73,6 +66,7 @@
     "postcss": "^8.5.6",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
     "pretty-quick": "^4.2.2",
     "storybook": "^9.0.18",
     "tailwindcss": "^4.1.11",

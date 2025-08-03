@@ -1,131 +1,61 @@
 <div
-  class="w-full h-screen bg-gradient-to-br from-purple-800/60 via-black/50 to-purple-800/60"
+  class="flex h-screen w-full items-center justify-center bg-gradient-to-br from-purple-800/60 via-black/50 to-purple-800/60"
 >
-  <div class="md:hidden flex flex-col">
-    <div class="mt-[100px]">
-      <app-base-card width="w-[372px]" height="h-fit" bgColor="bg-black/25">
-        <div class="flex flex-col w-full justify-center items-center">
-          <div
-            class="flex flex-row w-full text-white gap-2 text-3xl mt-10 justify-center items-center text-center mb-1"
-          >
-            <h1>??</h1>
-            <h1>کاراپیشه</h1>
-            <img src="/assets/icons/Frame1.svg" alt="icon" />
-          </div>
-          <p
-            class="text-white/70 text-sm flex text-center justify-center mb-15"
-          >
-            حساب کاربری خود را بسازید.
-          </p>
-          <div class="mx-4">
-            <app-form-field>
-              <input
-                type="text"
-                class="w-[270px] h-[40px] text-[13px] text-white/60"
-                placeholder=" نام کاربری یا ایمیل"
-            /></app-form-field>
+  <div
+    class="flex h-10/12 w-10/12 flex-col items-center justify-center rounded-2xl bg-black/30 md:flex-row"
+  >
+    <!-- Desktop Intro Text (Hidden on small screens) -->
+    <div class="container hidden h-full flex-col justify-center gap-4 px-6 text-white md:flex">
+      <h3 class="text-2xl font-bold">به کاراپیشه خوش اومدی!</h3>
 
-            <app-form-field
-              ><input
-                type="password"
-                class="w-[270px] h-[40px] text-[13px] text-white/60 mt-5"
-                placeholder="گذرواژه"
-            /></app-form-field>
-
-            <p class="text-red-700 text-start text-[10px] mr-2 mb-10">
-              نام کاربری یا ایمیل معتبر نمی باشد
-            </p>
-          </div>
-
-          <div>
-            <app-base-button
-              [labelType]="'button2'"
-              [rounded]="'lg'"
-              [disabled]="false"
-              [bgColor]="'primary'"
-              [size]="'sm'"
-              [label]="'ورود'"
-            ></app-base-button>
-          </div>
-          <app-base-text type="body3"
-            ><p class="text-gray-500 text-start text-[13px] mt-3 mb-25">
-              فراموشی رمز
-            </p></app-base-text
-          >
-        </div>
-      </app-base-card>
+      <p class="text-sm text-white/50">
+        اینجا می‌تونی روند پیشرفت‌تو ببینی، تسک‌هاتو مدیریت کنی و همیشه یک قدم جلوتر باشی. برای
+        ادامه، وارد حساب کاربری خود شوید.
+      </p>
     </div>
-  </div>
-  <div class="hidden md:block">
-    <div class="flex justify-center text-center items-center min-h-screen p-4">
-      <div class="flex flex-row h-[600px]">
-        <app-base-card
-          width="w-[610px]"
-          height="h-[600px]"
-          padding="py-[14.25rem]"
-          bgColor="bg-black/20"
-          borderRadius="rounded-r-2xl rounded-l-none"
-        >
-          <div
-            class="flex flex-col justify-center items-start h-full w-full text-white text-end px-4 mr-10"
-          >
-            <h1 class="text-lg text-start mb-8 mt-10">
-              <app-base-text type="header1">
-                به کاراپیشه خوش اومدی!
-              </app-base-text>
-            </h1>
-            <div class="text-start">
-              <app-base-text type="body1">
-                <p>اینجا می‌تونی روند پیشرفت‌تو ببینی، تسک‌هاتو مدیریت کنی و</p>
-                <p>همیشه یک قدم جلوتر باشی.</p>
-                <p>برای ادامه، وارد حساب کاربری خود شوید.</p>
-              </app-base-text>
-            </div>
-          </div>
-        </app-base-card>
-        <app-base-card
-          width="w-[620px]"
-          height="h-[600px]"
-          padding="py-[4.75rem]"
-          bgColor="bg-black/60"
-          borderRadius="rounded-l-2xl rounded-r-none"
-        >
-          <div
-            class="flex flex-col text-white justify-center items-center w-full gap-8"
-          >
-            <h1 class="text-4xl font-semibold mb-8 mt-6">LOGIN</h1>
-            <app-form-field>
-              <input
-                type="text"
-                class="w-[344px]"
-                placeholder=" نام کاربری یا ایمیل"
-            /></app-form-field>
-            <div class="flex flex-col mb-1">
-              <app-form-field
-                ><input type="password" class="w-[344px]" placeholder="گذرواژه"
-              /></app-form-field>
-              <p class="text-red-700 text-start text-xs mr-2 mb-8">
-                نام کاربری یا ایمیل معتبر نمی باشد
-              </p>
-            </div>
-            <div class="flex flex-col mt-10 mb-6 w-[344px]">
-              <app-base-button
-                [rounded]="'lg'"
-                labelType="button2"
-                [disabled]="false"
-                [bgColor]="'primary'"
-                [size]="'full'"
-                [label]="'ورود'"
-              ></app-base-button>
-              <!--            <button class="w-[344px] h-[41px] bg-indigo-400 rounded-lg mb-3">ورود</button>-->
-              <app-base-text type="body3"
-                ><p class="text-gray-500 text-start text-sm mr-2">
-                  فراموشی رمز
-                </p></app-base-text
-              >
-            </div>
-          </div>
-        </app-base-card>
+
+    <!-- Login Card (Responsive) -->
+    <div
+      class="flex h-full w-full flex-col items-center justify-center gap-8 rounded-l-2xl bg-black/30 px-30 py-50"
+    >
+      <!-- Logo -->
+      <div class="flex h-20 w-20 flex-row items-center justify-center text-center md:h-35 md:w-35">
+        <img src="assets/icons/karapisheh33.svg" alt="logo" />
+        <img src="assets/icons/Karapisheh2.svg" alt="logotext" />
+      </div>
+
+      <!-- Title -->
+      <p class="text-md text-white">ورود</p>
+
+      <!-- Form -->
+      <div class="w-full space-y-6">
+        <!-- Username Field -->
+        <div>
+          <p class="text-sm text-white/60">نام کاربری یا ایمیل</p>
+          <input
+            type="password"
+            class="h-9 w-full rounded-2xl bg-white/5 px-4 text-sm text-white/10"
+            placeholder=" نام کاربری یا ایمیل را وارد نمایید."
+          />
+        </div>
+
+        <!-- Password Field -->
+        <div>
+          <p class="text-sm text-white/60">گذرواژه</p>
+
+          <input
+            type="password"
+            class="h-9 w-full rounded-2xl bg-white/5 px-4 text-sm text-white/10"
+            placeholder="گذرواژه"
+          />
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div
+        class="flex w-full items-center justify-center rounded-lg bg-indigo-500 py-1 font-bold text-white"
+      >
+        ورود
       </div>
     </div>
   </div>
