@@ -8,14 +8,11 @@
     'disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-100',
   ]"
 >
-  <app-base-text
-    [type]="labelType()"
-    [classes]="'flex gap-1 items-center justify-center '"
-  >
+  <app-base-text [type]="labelType()" [classes]="'flex gap-1 items-center justify-center '">
     @if (icon()) {
-      <span>
-        <lucide-angular size="20" [name]="icon()?.toString()"></lucide-angular>
-      </span>
+    <span>
+      <lucide-angular size="20" [name]="icon()?.toString()"></lucide-angular>
+    </span>
     }
     <h1>{{ label() }}</h1>
   </app-base-text>
