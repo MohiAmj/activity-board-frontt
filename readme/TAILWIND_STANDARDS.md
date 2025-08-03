@@ -13,13 +13,13 @@ This document outlines the core Tailwind CSS coding standards our team follows t
 Correct
 
 ```html
-<div class="p-4 sm:p-6 md:p-8 "></div>
+<div class="p-4 sm:p-6 md:p-8"></div>
 ```
 
 Incorrect:
 
 ```html
-<div class="p-4 max-sm:p-6 max-md:p-8"></div>
+<div class="p-4 max-md:p-8 max-sm:p-6"></div>
 ```
 
 ---
